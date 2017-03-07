@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="picture@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="picture">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="checksysytem"/>
+    <schema id="4" parent="1" name="communityshoppingsystem"/>
+    <schema id="5" parent="1" name="familyservicesystem1"/>
+    <schema id="6" parent="1" name="information_schema"/>
+    <schema id="7" parent="1" name="justplay"/>
+    <schema id="8" parent="1" name="loan"/>
+    <schema id="9" parent="1" name="mysql"/>
+    <schema id="10" parent="1" name="performance_schema"/>
+    <schema id="11" parent="1" name="sakila"/>
+    <schema id="12" parent="1" name="sys"/>
+    <table id="13" parent="2" name="blog"/>
+    <table id="14" parent="2" name="cameraman"/>
+    <table id="15" parent="2" name="combo"/>
+    <table id="16" parent="2" name="comment"/>
+    <table id="17" parent="2" name="issue"/>
+    <table id="18" parent="2" name="order"/>
+    <table id="19" parent="2" name="picture"/>
+    <table id="20" parent="2" name="praise"/>
+    <table id="21" parent="2" name="user"/>
+    <column id="22" parent="13" name="blogid">
+      <Position>1</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="23" parent="13" name="userid">
+      <Position>2</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="24" parent="13" name="name">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="25" parent="13" name="content">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="26" parent="13" name="picture">
+      <Position>5</Position>
+      <DataType>varchar(300)|0</DataType>
+    </column>
+    <column id="27" parent="13" name="praisenumber">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="28" parent="13" name="commentnumber">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="29" parent="13" name="time">
+      <Position>8</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="30" parent="13" name="site">
+      <Position>9</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="31" parent="13" name="PRIMARY">
+      <ColNames>blogid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="32" parent="14" name="cameramanid">
+      <Position>1</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="14" name="name">
+      <Position>2</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="34" parent="14" name="sex">
+      <Position>3</Position>
+      <DataType>varchar(2)|0</DataType>
+    </column>
+    <column id="35" parent="14" name="idcard">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="36" parent="14" name="job">
+      <Position>5</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="37" parent="14" name="phonenumber">
+      <Position>6</Position>
+      <DataType>varchar(12)|0</DataType>
+    </column>
+    <column id="38" parent="14" name="equipment">
+      <Position>7</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="39" parent="14" name="type">
+      <Position>8</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="40" parent="14" name="style">
+      <Position>9</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="41" parent="14" name="intro">
+      <Position>10</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="42" parent="14" name="production">
+      <Position>11</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="43" parent="14" name="website">
+      <Position>12</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="44" parent="14" name="idcardpic">
+      <Position>13</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="45" parent="14" name="PRIMARY">
+      <ColNames>cameramanid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="46" parent="15" name="cameramanid">
+      <Position>2</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="47" parent="15" name="content">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="48" parent="15" name="prize">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="49" parent="15" name="unit">
+      <Position>5</Position>
+      <DataType>varchar(5)|0</DataType>
+    </column>
+    <column id="50" parent="15" name="comboid">
+      <Position>1</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="51" parent="15" name="PRIMARY">
+      <ColNames>comboid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="52" parent="16" name="blogid">
+      <Position>2</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="53" parent="16" name="content">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="54" parent="16" name="userid">
+      <Position>4</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="55" parent="16" name="time">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="56" parent="16" name="commentid">
+      <Position>1</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="57" parent="16" name="PRIMARY">
+      <ColNames>commentid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="58" parent="17" name="usrid">
+      <Position>2</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="59" parent="17" name="content">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="60" parent="17" name="kind">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="61" parent="17" name="issueid">
+      <Position>1</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="62" parent="17" name="PRIMARY">
+      <ColNames>issueid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="63" parent="18" name="orderid">
+      <Position>1</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="64" parent="18" name="cameramanid">
+      <Position>2</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="65" parent="18" name="userid">
+      <Position>3</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="66" parent="18" name="content">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="67" parent="18" name="phonenumber">
+      <Position>5</Position>
+      <DataType>varchar(12)|0</DataType>
+    </column>
+    <column id="68" parent="18" name="time">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="69" parent="18" name="site">
+      <Position>7</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="70" parent="18" name="orderstate">
+      <Position>8</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="71" parent="18" name="PRIMARY">
+      <ColNames>orderid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="72" parent="19" name="pictureid">
+      <Position>1</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="73" parent="19" name="userid">
+      <Position>2</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="74" parent="19" name="url">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="75" parent="19" name="PRIMARY">
+      <ColNames>pictureid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="76" parent="20" name="blogid">
+      <Position>2</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="77" parent="20" name="userid">
+      <Position>3</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="78" parent="20" name="time">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="79" parent="20" name="praiseid">
+      <Position>1</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="80" parent="20" name="PRIMARY">
+      <ColNames>praiseid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="81" parent="21" name="userid">
+      <Position>1</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="82" parent="21" name="name">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="83" parent="21" name="phonenumber">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="84" parent="21" name="password">
+      <Position>4</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="85" parent="21" name="lastlogintime">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="86" parent="21" name="PRIMARY">
+      <ColNames>userid</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
