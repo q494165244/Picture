@@ -16,7 +16,7 @@ import java.util.List;
  * THIS IS A CLASS WHICH METHOD IS ALL ABOUT LOGIN.
  * THREE METHOD : LOGIN REGISTER CameramanaRegister
  */
-public class Login {
+public class Login  {
     /*
     * a method to simple user to login
      * param : String:username String:password
@@ -33,6 +33,12 @@ public class Login {
             Query query = session.createQuery(hql).setParameter("username",username);
             List<UserEntity> list = query.list();
             //check the password
+            System.out.println(username);
+            if (list.size()==0){
+                return  false;
+            }
+            System.out.println(list.get(0).getPassword());
+
             if (list.get(0).getPassword().equals(password)){
                 flag = true;
             }
