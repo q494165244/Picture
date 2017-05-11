@@ -9,22 +9,31 @@
 <title>注册</title>
 </head>
 <body>
-	<form name="RegisterForm" method="post" action="/Test/User/register.do">
+	<form name="RegisterForm" method="post" action="/test/User/register.do">
 		<table>
 			<tr>
-				<td>用户名:<input type="text" name="userid" id="userid"></td>
+				<td>手机号码:<input type="text" name="user_mobile" id="user_mobile"></td>
 			</tr>
 			<tr>
-				<td>姓名:<input type="text" name="name" id="name"></td>
+				<td>密码:<input type="password" name="user_pwd" id="user_pwd"></td>
 			</tr>
 			<tr>
-				<td>密码:<input type="password" name="password" id="password"></td>
+				<td>确认密码:<input type="password" name="confirmPassword"
+					id="confirmPassword"></td>
 			</tr>
 			<tr>
-				<td>确认密码:<input type="password" name="confirmPassword" id="confirmPassword"></td>
+				<td>性别: <select name="user_sex" id="user_sex">
+						<option value="0">男</option>
+						<option value="1">女</option>
+				</select>
+				</td>
 			</tr>
 			<tr>
-				<td>电话号码:<input type="text" name="phonenumber" id="phonenumber"></td>
+				<td>注册类型: <select name="user_role" id="user_role">
+						<option value="0">消费者</option>
+						<option value="1">摄影师</option>
+				</select>
+				</td>
 			</tr>
 			<tr>
 				<td><input type="submit" value="注册"></td>
