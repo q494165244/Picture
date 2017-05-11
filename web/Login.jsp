@@ -6,10 +6,10 @@
 </head>
 
 <body>
-	<form name="loginForm" method="post" action="/Test/User/login.do">
+	<form name="loginForm" method="post" action="/test/User/login.do">
 		<table>
 			<tr>
-				<td>用户名:<input type="text" name="username" id="username"></td>
+				<td>手机号:<input type="text" name="username" id="username"></td>
 			</tr>
 			<tr>
 				<td>密码:<input type="password" name="password" id="password"></td>
