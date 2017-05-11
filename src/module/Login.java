@@ -4,11 +4,7 @@ import bean.CameramanEntity;
 import bean.UserEntity;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-import org.hibernate.query.Query;
-
-import javax.print.DocFlavor;
+import org.hibernate.Query;
 import java.util.List;
 
 /**
@@ -26,7 +22,7 @@ public class Login  {
     public boolean login(String username,String password ){
         boolean flag = false;
         //a hql sentence to get the user
-        String hql = "from UserEntity user where user.name = :username";
+        String hql = "from UserEntity user where user.user_mobile = :username";
         Session session = null;
         try {
             session =  HibernateInit.getSession();
@@ -37,9 +33,9 @@ public class Login  {
             if (list.size()==0){
                 return  false;
             }
-            System.out.println(list.get(0).getPassword());
+            System.out.println(list.get(0).getuser_pwd());
 
-            if (list.get(0).getPassword().equals(password)){
+            if (list.get(0).getuser_pwd().equals(password)){
                 flag = true;
             }
         } catch (HibernateException e) {
