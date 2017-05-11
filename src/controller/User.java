@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import tools.MD5;
 
+import java.io.IOException;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -18,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 public class User {
     @RequestMapping("login.do")
     public void login (String username, String password, HttpServletRequest request, HttpServletResponse response){
-        boolean flag = new Login().login(username, password);
+        boolean flag = new Login().login(username, MD5.getMD5(password));
         if (flag == true){
             RespenseTools.success("success",response);
             request.getSession().setAttribute("islogin",true);
@@ -28,27 +30,26 @@ public class User {
     }
     @RequestMapping(value = "register.do", method ={RequestMethod.POST})
     public void register (UserEntity userEntity, HttpServletResponse response, HttpServletRequest request){
-        String md5 = userEntity.getName();
+        String md5 = userEntity.getuser_pwd();
         md5 = MD5.getMD5(md5);
-        userEntity.setUserid(md5);
+        userEntity.setuser_pwd(md5);
         Login login = new Login();
         if (login.register(userEntity)){
-            RespenseTools.success("注册成功",response);
+            RespenseTools.success("OK",response);
             request.getSession().setAttribute("islogin",true);
         }else {
-            RespenseTools.fail(400,"注册失败",response);
+            RespenseTools.fail(400,"Fail",response);
         }
     }
     @RequestMapping("islogin.do")
-    public  void  islogin (HttpServletResponse response, HttpServletRequest request){
+    public  void  islogin (HttpServletResponse response, HttpServletRequest request) throws IOException{
 
         try {
             if ((boolean)request.getSession().getAttribute("islogin")){
-                RespenseTools.success("已登录",response);
+                RespenseTools.success("Already Login",response);
             }
         } catch (Exception e) {
-            RespenseTools.fail(400,"未登录",response);
-            e.printStackTrace();
+            response.sendRedirect("./test/Login.jsp");
         }
     }
 }
