@@ -8,86 +8,66 @@ import javax.persistence.*;
 @Entity
 @Table(name = "user", schema = "picture", catalog = "")
 public class UserEntity {
-    private String userid;
-    private String name;
-    private String phonenumber;
-    private String password;
-    private String lastlogintime;
+    private int user_id;
+    private String user_name;
+    private String user_pwd;
+    private int user_sex;
+    private String user_sign;
+    private String user_overview;
+    private String user_mobile;
+    private String user_img;
+    private int user_role;
+    private String user_time;
+    private String user_ip;
 
     @Id
-    @Column(name = "userid", nullable = false, length = 32)
-    public String getUserid() {
-        return userid;
+    @Column(name = "user_id", nullable = false, length = 32)
+    public int getuser_id() {
+        return user_id;
     }
 
-    public void setUserid(String userid) {
-        this.userid = userid;
-    }
-
-    @Basic
-    @Column(name = "name", nullable = true, length = 45)
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public void setuser_id(int user_id) {
+        this.user_id = user_id;
     }
 
     @Basic
-    @Column(name = "phonenumber", nullable = true, length = 45)
-    public String getPhonenumber() {
-        return phonenumber;
+    @Column(name = "user_mobile", nullable = false, length = 20)
+    public String getuser_mobile() {
+        return user_mobile;
     }
 
-    public void setPhonenumber(String phonenumber) {
-        this.phonenumber = phonenumber;
-    }
-
-    @Basic
-    @Column(name = "password", nullable = true, length = 32)
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    public void setuser_mobile(String user_mobile) {
+        this.user_mobile = user_mobile;
     }
 
     @Basic
-    @Column(name = "lastlogintime", nullable = true, length = 45)
-    public String getLastlogintime() {
-        return lastlogintime;
+    @Column(name = "user_pwd", nullable = false, length = 50)
+    public String getuser_pwd() {
+        return user_pwd;
     }
 
-    public void setLastlogintime(String lastlogintime) {
-        this.lastlogintime = lastlogintime;
+    public void setuser_pwd(String user_pwd) {
+        this.user_pwd = user_pwd;
+    }
+    
+    @Basic
+    @Column(name = "user_sex", nullable = false, length = 11)
+    public int getuser_sex() {
+        return user_sex;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        UserEntity that = (UserEntity) o;
-
-        if (userid != null ? !userid.equals(that.userid) : that.userid != null) return false;
-        if (name != null ? !name.equals(that.name) : that.name != null) return false;
-        if (phonenumber != null ? !phonenumber.equals(that.phonenumber) : that.phonenumber != null) return false;
-        if (password != null ? !password.equals(that.password) : that.password != null) return false;
-        if (lastlogintime != null ? !lastlogintime.equals(that.lastlogintime) : that.lastlogintime != null)
-            return false;
-
-        return true;
+    public void setuser_sex(int user_sex) {
+        this.user_sex = user_sex;
     }
 
-    @Override
-    public int hashCode() {
-        int result = userid != null ? userid.hashCode() : 0;
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (phonenumber != null ? phonenumber.hashCode() : 0);
-        result = 31 * result + (password != null ? password.hashCode() : 0);
-        result = 31 * result + (lastlogintime != null ? lastlogintime.hashCode() : 0);
-        return result;
+    @Basic
+    @Column(name = "user_role", nullable = false, length = 11)
+    public int getuser_role() {
+        return user_role;
     }
+
+    public void setuser_role(int user_role) {
+        this.user_role = user_role;
+    }
+
 }
